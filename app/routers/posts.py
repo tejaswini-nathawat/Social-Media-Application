@@ -118,7 +118,7 @@ def update_post(id:int,var:schemas.post1,db: Session=Depends(get_db),user_cur:in
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="id to be updated does not exist")
 #    k.update({'title':'spotify', 'content':'hwihidhwik','published':'true'})
    if ok.owner_id != user_cur.id  :  
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail="user not authorised to perform this action")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail="user not authorised, to perform this action")
 
    k.update(var.dict(),synchronize_session=False)
    db.commit()   

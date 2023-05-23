@@ -17,9 +17,7 @@ app.include_router(auth.router)
 app.include_router(vote.router)      
 @app.get("/")
 async def root():
-    return {"message":"Tejaswini Nathawat bpsr"}
-
-
+    return {"message":"Tejaswini Nathawat bpsr, bekar "}
 
 
 
